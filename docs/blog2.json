@@ -1,0 +1,16 @@
+[
+ {
+  "url_title": "CV",
+  "title": "Curriculum Vitae",
+  "sub_title": "",
+  "top_image": "img.png",
+  "visible": true
+ }
+ {
+  "url_title": "ResearchStatement",
+  "title": "Research Statement",
+  "sub_title": "",
+  "top_image": "img.png",
+  "visible": true
+ }
+]
