@@ -1,3 +1,3 @@
-#Seitaro Iwama's personal webpage
+# Seitaro Iwama's personal webpage
 (under construction)
-https://neuroiwm.github.io/blog/CV/
+https://neuroiwm.github.io/
