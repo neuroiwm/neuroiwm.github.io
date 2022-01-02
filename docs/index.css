@@ -571,13 +571,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(255, 255, 255)
     ),
-    url("./image.png");
+    url("./image.jpg");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("./image.png") center center fixed;
+    url("./image.jpg") center center fixed;
   --height: 50vh;
 }
 
