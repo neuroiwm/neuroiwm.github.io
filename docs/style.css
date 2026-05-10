@@ -1,0 +1,225 @@
+:root {
+  --fg: #1a1a1c;
+  --fg-muted: #5b5b62;
+  --bg: #fafaf9;
+  --bg-card: #ffffff;
+  --border: #e6e6e3;
+  --border-strong: #1a1a1c;
+  --accent: #1a1a1c;
+  --radius: 12px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 6px 24px rgba(0, 0, 0, 0.08);
+  --transition: 160ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #f1f1ef;
+    --fg-muted: #a1a19b;
+    --bg: #0f0f10;
+    --bg-card: #18181a;
+    --border: #2a2a2d;
+    --border-strong: #f1f1ef;
+    --accent: #f1f1ef;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.5);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+               "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+               "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover { text-decoration-thickness: 2px; }
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.lp {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(48px, 10vh, 96px) 24px 48px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lp__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lp__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.lp__name {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+.lp__tagline {
+  margin: 0 0 48px;
+  color: var(--fg-muted);
+  font-size: 1rem;
+  max-width: 32em;
+}
+
+.lp__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.card {
+  display: grid;
+  grid-template-areas:
+    "flag arrow"
+    "lang arrow"
+    "desc arrow";
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              border-color var(--transition);
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.card__flag {
+  grid-area: flag;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.card__lang {
+  grid-area: lang;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.card__desc {
+  grid-area: desc;
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.card__arrow {
+  grid-area: arrow;
+  font-size: 1.5rem;
+  color: var(--fg-muted);
+  transition: transform var(--transition), color var(--transition);
+}
+
+.card:hover .card__arrow,
+.card:focus-visible .card__arrow {
+  transform: translateX(4px);
+  color: var(--fg);
+}
+
+.lp__affiliation {
+  margin: 0 0 64px;
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.lp__footer {
+  margin-top: auto;
+  width: 100%;
+}
+
+.lp__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.lp__links a {
+  color: var(--fg-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.lp__links a:hover,
+.lp__links a:focus-visible {
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+}
+
+@media (max-width: 560px) {
+  .lp__cards {
+    grid-template-columns: 1fr;
+  }
+  .lp__tagline { margin-bottom: 32px; }
+  .lp__affiliation { margin-bottom: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  .card:hover { transform: none; }
+  .card:hover .card__arrow { transform: none; }
+}

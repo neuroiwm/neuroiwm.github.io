@@ -1,168 +1,99 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>neuroiwm</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-    <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="https://raw.githubusercontent.com/neuroiwm/neuroiwm.github.io/main/material/icon.png?token=AMILK7P2EXKUX3INETT6FBTB3DBUM" type="image/png"></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f0f10">
 
-  <body>
-    <div id="loading">
-      <div id="spinner"></div>
-    </div>
-    <div id="profile">
-      <div id="profile_img" style="background: url(https://github.com/neuroiwm/neuroiwm.github.io/blob/main/material/icon.png?raw=true) center;"></div>
-      <div id="username"><span style="display:none;">null</span><a href="https://github.com/neuroiwm">@neuroiwm</a></div>
-      <div id="userbio" style="display: none;">undefined</div>
-      <div id="about">
-                <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-link"></i> &nbsp; <a href=""></a></span>
-                <span style="display:none;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
-                <div class="socials">
-                <span style="display:none !important;"><a href="https://www.twitter.com/null" target="_blank" class="socials"><i class="fab fa-twitter"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.dribbble.com/null" target="_blank" class="socials"><i class="fab fa-dribbble"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.linkedin.com/in/null/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.medium.com/@null/" target="_blank" class="socials"><i class="fab fa-medium-m"></i></a></span>
-                </div>
-                </div>
-    </div>
-    <div id="display">
-      <div id="blog_section">
-        <h1>Profile.</h1>
-        <div id="blogs"></div>
-      </div>
-      <div id="work">
-        <h1>Work.</h1>
-        <div class="projects" id="work_section">
-                        <a href="https://github.com/neuroiwm/tutorial2021_spafil" target="_blank">
-                        <section>
-                            <div class="section_title">tutorial2021_spafil</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; MATLAB</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/neuroiwm/sLORETA_EGI" target="_blank">
-                        <section>
-                            <div class="section_title">sLORETA_EGI</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; MATLAB</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/neuroiwm/DAQsync_toy" target="_blank">
-                        <section>
-                            <div class="section_title">DAQsync_toy</div>
-                            <div class="about_section">
-                            <span style="display:block;">Sync two NI DAQ connected to different computers</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; MATLAB</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/neuroiwm/colormap" target="_blank">
-                        <section>
-                            <div class="section_title">colormap</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; MATLAB</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a></div>
-      </div>
-      <div id="forks" style="display:none;">
-        <h1>Forks.</h1>
-        <div class="projects" id="forks_section"></div>
-      </div>      
-      <div id="footer">
-        <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
-      </div>
-    </div>
-    <script type="text/javascript">
-      setTimeout(function() {
-        document.getElementById("loading").classList.add("animated");
-        document.getElementById("loading").classList.add("fadeOut");
-        setTimeout(function() {
-          document.getElementById("loading").classList.remove("animated");
-          document.getElementById("loading").classList.remove("fadeOut");
-          document.getElementById("loading").style.display = "none";
-        }, 800);
-      }, 1500);
-      $.getJSON("blog.json", function(blog) {
-        blog = blog || [];
-        if (blog.length == 0) {
-          return (document.getElementById("blog_section").style.display =
-            "none");
-        }
-        for (var i = 0; i < blog.length; i++) {
-          $("#blogs").append(`
-            <a href="./blog/${blog[i].url_title}/" target="_blank">
-                <section>
-                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
-                    <div class="blog_container">
-                        <div class="section_title">${blog[i].title}</div>
-                        <div class="about_section">
-                            ${blog[i].sub_title}
-                        </div>
-                    </div>
-                </section>
-            </a>
-            `);
-        }
-      }).fail(function() {
-        return (document.getElementById("blog_section").style.display = "none");
-      });
-    </script>
+<title>Seitaro Iwama, Ph.D.</title>
+<meta name="description" content="Researcher in brain-computer interface, neurofeedback, and human neural dynamics. Keio University.">
 
-    <script>
-      const magicProjectsGrid = new MagicGrid({
-        container: "#work_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
+<link rel="canonical" href="https://neuroiwm.github.io/">
+<link rel="alternate" hreflang="ja" href="https://seitaro-iwama.notion.site/">
+<link rel="alternate" hreflang="en" href="https://seitaro-iwama.notion.site/">
+<link rel="alternate" hreflang="x-default" href="https://neuroiwm.github.io/">
 
-      const magicForksGrid = new MagicGrid({
-        container: "#forks_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
+<link rel="icon" href="assets/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon.png">
 
-      $("document").ready(() => {
-        magicProjectsGrid.listen();
-        magicForksGrid.listen();
-      });
-    </script>
-  
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Seitaro Iwama, Ph.D.">
+<meta property="og:description" content="Brain-computer interface, neurofeedback, and human neural dynamics. Keio University.">
+<meta property="og:url" content="https://neuroiwm.github.io/">
+<meta property="og:image" content="https://neuroiwm.github.io/assets/icon.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
 
-</body></html>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Seitaro Iwama, Ph.D.">
+<meta name="twitter:description" content="Brain-computer interface, neurofeedback, and human neural dynamics. Keio University.">
+<meta name="twitter:image" content="https://neuroiwm.github.io/assets/icon.png">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Seitaro Iwama",
+  "honorificSuffix": "Ph.D.",
+  "jobTitle": "Researcher",
+  "description": "Brain-computer interface, neurofeedback, and human neural dynamics.",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Keio University"
+  },
+  "url": "https://neuroiwm.github.io/",
+  "sameAs": [
+    "https://orcid.org/0000-0002-3485-7438",
+    "https://scholar.google.co.jp/citations?user=8e2VO_oAAAAJ",
+    "https://github.com/neuroiwm"
+  ]
+}
+</script>
+</head>
+<body>
+<main class="lp">
+
+  <header class="lp__header">
+    <img class="lp__avatar" src="assets/icon.png" alt="" width="96" height="96">
+    <h1 class="lp__name">Seitaro Iwama, Ph.D.</h1>
+    <p class="lp__tagline">
+      Brain-computer interface, neurofeedback,<br>
+      and human neural dynamics.
+    </p>
+  </header>
+
+  <!--
+    Phase 1: 両カードとも現行Notion HP（バイリンガル）にリンク。
+    Phase 2 で JA / EN それぞれの Notion top page URL に差し替える。
+  -->
+  <nav class="lp__cards" aria-label="Choose your language">
+    <a class="card card--ja" href="https://seitaro-iwama.notion.site/" hreflang="ja" lang="ja">
+      <span class="card__flag" aria-hidden="true">🇯🇵</span>
+      <span class="card__lang">日本語</span>
+      <span class="card__desc">研究内容・業績・問い合わせ</span>
+      <span class="card__arrow" aria-hidden="true">&rarr;</span>
+    </a>
+    <a class="card card--en" href="https://seitaro-iwama.notion.site/" hreflang="en" lang="en">
+      <span class="card__flag" aria-hidden="true">🌐</span>
+      <span class="card__lang">English</span>
+      <span class="card__desc">Research, publications, and contact</span>
+      <span class="card__arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  </nav>
+
+  <p class="lp__affiliation">Keio University</p>
+
+  <footer class="lp__footer">
+    <ul class="lp__links" aria-label="External links">
+      <li><a href="https://orcid.org/0000-0002-3485-7438" rel="me noopener" target="_blank">ORCID</a></li>
+      <li><a href="https://scholar.google.co.jp/citations?user=8e2VO_oAAAAJ" rel="me noopener" target="_blank">Google Scholar</a></li>
+      <li><a href="https://github.com/neuroiwm" rel="me noopener" target="_blank">GitHub</a></li>
+      <li><a href="mailto:iwama.research@gmail.com">Email</a></li>
+    </ul>
+  </footer>
+
+</main>
+</body>
+</html>
